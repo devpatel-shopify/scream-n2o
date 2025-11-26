@@ -51,7 +51,7 @@
     --width: {{ text_width }};
     --max-width: var(--max-width--{{ type }}-{{ block_settings.max_width }});
     {% if text_width == "100%" %}
-      --text-align: {{ block_settings.alignment }};
+      text-align: {{ block_settings.alignment }};
     {% endif %}
     {% if block_settings.background %}
       --text-background-color: {{ block_settings.background_color | default: 'rgb(255 255 255 / 1.0)' }};
@@ -84,6 +84,7 @@
 {% endif %}
 
 {% stylesheet %}
+
   :root {
     --text-align-default: left;
   }
