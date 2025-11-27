@@ -449,7 +449,18 @@
   </dialog-component>
 {% endif %}
 
+<style>
+  :root {
+    --filter-border-color: {{ block.settings.filter_border_color }};
+    --filter-border-radius: {{ block.settings.filter_border_radius }}px;
+  }
+ .facets-block-wrapper .facets  {
+  border: 1px solid var(--filter-border-color);
+  border-radius: var(--filter-border-radius);
+}
+</style>
 {% stylesheet %}
+
   .collection-wrapper {
     @media screen and (min-width: 750px) {
       --facets-vertical-col-width: 6;
@@ -1229,7 +1240,23 @@
       "unit": "px",
       "default": 20,
       "visible_if": "{{ block.settings.filter_style == 'vertical' }}"
-    }
+    },
+ 
+    {
+      "type": "color",
+      "id": "filter_border_color",
+      "label": "Filter Border Color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "range",
+      "id": "filter_border_radius",
+      "label": "Filter Border Radius",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "default": 4
+    },
   ]
 }
 {% endschema %}
