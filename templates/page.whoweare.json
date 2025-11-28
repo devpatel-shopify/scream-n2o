@@ -12,21 +12,6 @@
     "main": {
       "type": "main-page",
       "blocks": {
-        "button_PxAxxM": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Shop now",
-            "link": "shopify://collections/all",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        },
         "heading": {
           "type": "text",
           "name": "Title",
@@ -34,7 +19,7 @@
             "text": "<h1>{{ closest.page.title }}</h1>",
             "width": "100%",
             "max_width": "normal",
-            "alignment": "left",
+            "alignment": "center",
             "type_preset": "h2",
             "font": "var(--font-primary--family)",
             "font_size": "",
@@ -60,7 +45,6 @@
         }
       },
       "block_order": [
-        "button_PxAxxM",
         "heading",
         "page-content"
       ],
