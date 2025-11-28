@@ -1,6 +1,7 @@
 
 {% assign block_settings = block.settings %}
 
+{% if block_settings.heading != blank %}
 <accordion-custom
   {% if block_settings.open_by_default %}
     open-by-default-on-desktop
@@ -13,6 +14,7 @@
     {{ block.shopify_attributes }}
   >
     <summary class="details__header">
+       
       {% render 'icon-or-image',
         icon: block_settings.icon,
         image_upload: block_settings.image_upload,
@@ -34,6 +36,7 @@
   </details>
 </accordion-custom>
 
+{% endif %}
 {% stylesheet %}
   .details__icon {
     height: auto;
