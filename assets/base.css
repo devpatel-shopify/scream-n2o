@@ -4038,6 +4038,11 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 .group-block-content {
   height: 100%;
   width: 100%;
+  padding-block: 15px;
+}
+
+.group-block-content .group-block-content {
+  padding-block: 0;
 }
 
 /* Container styles */
