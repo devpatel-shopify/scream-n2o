@@ -69,7 +69,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "Get a quote.",
-            "link": "shopify://collections/all",
+            "link": "shopify://pages/quote-page",
             "open_in_new_tab": false,
             "style_class": "button-secondary",
             "width": "fit-content",
@@ -1848,7 +1848,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Get a quote.",
-                    "link": "shopify://collections/all",
+                    "link": "shopify://pages/quote-page",
                     "open_in_new_tab": false,
                     "style_class": "link",
                     "width": "fit-content",
@@ -2698,7 +2698,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Apply now >",
-                    "link": "shopify://collections/all",
+                    "link": "shopify://pages/quote-page",
                     "open_in_new_tab": false,
                     "style_class": "link",
                     "width": "fit-content",

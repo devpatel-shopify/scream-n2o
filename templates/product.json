@@ -178,9 +178,9 @@
               "type": "button",
               "name": "t:names.button",
               "settings": {
-                "label": "Get a quot.",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
+                "label": "Get a quote",
+                "link": "shopify://pages/quote-page",
+                "open_in_new_tab": true,
                 "style_class": "button",
                 "width": "fit-content",
                 "custom_width": 100,
