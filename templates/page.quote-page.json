@@ -1409,9 +1409,9 @@
             "form_id": "785848",
             "text_color": "#202020",
             "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
             "text_alignment": "center",
             "form_alignment": "center",
             "padding_top": 0,
@@ -1541,9 +1541,9 @@
             "form_id": "785848",
             "text_color": "#202020",
             "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
             "text_alignment": "center",
             "form_alignment": "flex-end",
             "padding_top": 0,
@@ -1584,6 +1584,17 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "custom_liquid_BHVVKU": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<script>\n(function(){\n  const selector = '[data-forms-id=\"forms-root-785848\"]';\n  const offset = 0;             // sticky header hoy to badhao (px)\n  const pollInterval = 120;     // retry interval (ms)\n  const maxPolls = 80;          // total retries before falling back to MutationObserver\n\n  let polls = 0;\n  function scrollToTarget(el){\n    const top = el.getBoundingClientRect().top + window.pageYOffset - offset;\n    window.scrollTo({ top, behavior: 'smooth' });\n  }\n\n  function tryScroll(){\n    const el = document.querySelector(selector);\n    if (el) {\n      scrollToTarget(el);\n      return true;\n    }\n    return false;\n  }\n\n  function startPolling() {\n    if (tryScroll()) return;\n    const poll = setInterval(() => {\n      polls++;\n      if (tryScroll()) {\n        clearInterval(poll);\n        return;\n      }\n      if (polls >= maxPolls) {\n        clearInterval(poll);\n        // Fallback: observe DOM for later insertion\n        const mo = new MutationObserver((mutations, observer) => {\n          if (document.querySelector(selector)) {\n            scrollToTarget(document.querySelector(selector));\n            observer.disconnect();\n          }\n        });\n        mo.observe(document.documentElement, { childList: true, subtree: true });\n      }\n    }, pollInterval);\n  }\n\n  // Start after DOM ready; also ensure attempt again on full load\n  if (document.readyState === 'complete' || document.readyState === 'interactive') {\n    // small delay to let scripts finish\n    setTimeout(startPolling, 50);\n  } else {\n    document.addEventListener('DOMContentLoaded', () => setTimeout(startPolling, 50));\n    window.addEventListener('load', () => setTimeout(startPolling, 50));\n  }\n})();\n</script>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
@@ -1593,6 +1604,7 @@
     "section_Ym7tWT",
     "hero_mByjhT",
     "section_7BAnwH",
-    "1765429718588581a1"
+    "1765429718588581a1",
+    "custom_liquid_BHVVKU"
   ]
 }
