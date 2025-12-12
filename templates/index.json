@@ -2698,7 +2698,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Apply now >",
-                    "link": "shopify://pages/quote-page",
+                    "link": "/pages/quote-page?scroll=false",
                     "open_in_new_tab": false,
                     "style_class": "link",
                     "width": "fit-content",
