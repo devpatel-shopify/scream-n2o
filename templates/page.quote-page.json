@@ -128,7 +128,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h1>Partner with us.<br/>Serve SCREAM! Earn More</h1>",
+                    "text": "<h1>Partner with us.<br/>Serve SCREAM! Earn More.</h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -389,7 +389,7 @@
               "type": "text",
               "name": "t:names.description",
               "settings": {
-                "text": "<p>A single point of contact who understands your business, handles your orders, and ensures you always have what you need.</p>",
+                "text": "<p>With streamlined warehousing and trusted couriers, we keep your stock moving so your customers never wait.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
@@ -683,7 +683,7 @@
               "type": "text",
               "name": "t:names.description",
               "settings": {
-                "text": "<p>Distributor-only discounts designed to help you scale — the more you grow, the more we both succeed</p>",
+                "text": "<p>Distributor-only discounts designed to help you scale — the more you grow, the more we both succeed.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
