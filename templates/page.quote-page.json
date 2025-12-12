@@ -128,7 +128,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h1>Partner with us.<br/>Serve SCREAM! Earn More.</h1>",
+                    "text": "<h1>Partner with us.<br/>Serve SCREAM! Earn More</h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -389,7 +389,7 @@
               "type": "text",
               "name": "t:names.description",
               "settings": {
-                "text": "<p>With streamlined warehousing and trusted couriers, we keep your stock moving so your customers never wait.</p>",
+                "text": "<p>A single point of contact who understands your business, handles your orders, and ensures you always have what you need.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
@@ -683,7 +683,7 @@
               "type": "text",
               "name": "t:names.description",
               "settings": {
-                "text": "<p>Distributor-only discounts designed to help you scale — the more you grow, the more we both succeed.</p>",
+                "text": "<p>Distributor-only discounts designed to help you scale — the more you grow, the more we both succeed</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
@@ -1589,7 +1589,7 @@
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "<script>\nconst selector = '[data-forms-id=\"forms-root-785848\"]';\n  const offset = 0;             // increase if you have sticky header (px)\n  const pollInterval = 120;     // retry interval (ms)\n  const maxPolls = 80;          // total retries before using MutationObserver\n\n  let polls = 0;\n\n  function scrollToTarget(el){\n    const elementTop = el.getBoundingClientRect().top + window.pageYOffset;\n    const elementHeight = el.offsetHeight;\n    const viewportHeight = window.innerHeight;\n\n    // Center element in viewport\n    const top = elementTop - (viewportHeight / 2) + (elementHeight / 2) - offset;\n\n    window.scrollTo({ top, behavior: 'smooth' });\n  }\n\n  function tryScroll(){\n    const el = document.querySelector(selector);\n    if (el) {\n      scrollToTarget(el);\n      return true;\n    }\n    return false;\n  }\n\n  function startPolling() {\n    if (tryScroll()) return;\n\n    const poll = setInterval(() => {\n      polls++;\n      if (tryScroll()) {\n        clearInterval(poll);\n        return;\n      }\n      if (polls >= maxPolls) {\n        clearInterval(poll);\n        // Fallback: observe DOM for later insertion\n        const mo = new MutationObserver((mutations, observer) => {\n          const el = document.querySelector(selector);\n          if (el) {\n            scrollToTarget(el);\n            observer.disconnect();\n          }\n        });\n        mo.observe(document.documentElement, { childList: true, subtree: true });\n      }\n    }, pollInterval);\n  }\n\n  // Start after DOM ready; also attempt again on full load\n  if (document.readyState === 'complete' || document.readyState === 'interactive') {\n    setTimeout(startPolling, 50);\n  } else {\n    document.addEventListener('DOMContentLoaded', () => setTimeout(startPolling, 50));\n    window.addEventListener('load', () => setTimeout(startPolling, 50));\n  }\n</script>",
+        "custom_liquid": "<script>\nconst selector = '[data-forms-id=\"forms-root-785848\"]';\nconst offset = 0;  // sticky header if any\n\nfunction scrollCenter(el){\n  const checkReady = setInterval(() => {\n    const rect = el.getBoundingClientRect();\n    const elementHeight = rect.height;\n\n    // Wait until height is valid (Shopify sections load slowly)\n    if (elementHeight > 30) { \n      clearInterval(checkReady);\n\n      // Wait 1 frame to ensure layout is settled\n      requestAnimationFrame(() => {\n        const elementTop = rect.top + window.pageYOffset;\n        const viewportHeight = window.innerHeight;\n\n        const top = elementTop - (viewportHeight / 2) + (elementHeight / 2) - offset;\n\n        window.scrollTo({ top, behavior: 'smooth' });\n      });\n    }\n  }, 50);\n}\n\nfunction waitForElement() {\n  const el = document.querySelector(selector);\n\n  // If found, start checking height readiness\n  if (el) {\n    scrollCenter(el);\n    return;\n  }\n\n  // If not found, observe DOM until it appears\n  const mo = new MutationObserver(() => {\n    const el = document.querySelector(selector);\n    if (el) {\n      mo.disconnect();\n      scrollCenter(el);\n    }\n  });\n\n  mo.observe(document.body, { childList: true, subtree: true });\n}\n\ndocument.addEventListener(\"DOMContentLoaded\", waitForElement);\nwindow.addEventListener(\"load\", waitForElement);\n</script>",
         "color_scheme": "",
         "section_width": "page-width",
         "padding-block-start": 0,
