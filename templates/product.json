@@ -179,7 +179,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Get a quote",
-                "link": "shopify://pages/quote-page",
+                "link": "/pages/quote-page?scroll=true",
                 "open_in_new_tab": true,
                 "style_class": "button",
                 "width": "fit-content",
