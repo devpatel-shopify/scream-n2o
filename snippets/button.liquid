@@ -19,10 +19,15 @@
   {% endif %}
   class="
     size-style
+    {% if block_settings.style_class == "button-custom" %}
+     button
+     custom_button
+    {% else %}
     {{ block_settings.style_class }}
     {{ block_settings.style_class }}--{{ block.id }}
+     {% endif %}
     scroll-forrmsection
-    custom_button
+    
   "
   style="{% render 'size-style', settings: block_settings %}"
   {%- if block_settings.open_in_new_tab -%}

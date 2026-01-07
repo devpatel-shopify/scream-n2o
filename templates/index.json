@@ -71,7 +71,7 @@
             "label": "Get a quote.",
             "link": "/pages/quote-page?scroll=true",
             "open_in_new_tab": false,
-            "style_class": "button",
+            "style_class": "button-custom",
             "width": "fit-content",
             "custom_width": 100,
             "width_mobile": "fit-content",
@@ -433,32 +433,7 @@
                 "text_xGiCrr": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Fast, consistent deliveries,</p>",
-                    "width": "100%",
-                    "max_width": "none",
-                    "alignment": "center",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text_6Bgnbe": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>because chaos needs fuel</p>",
+                    "text": "<p>Fast, consistent deliveries,<br/>to refuel the chaos.</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "center",
@@ -483,8 +458,7 @@
               },
               "block_order": [
                 "text_NxERKN",
-                "text_xGiCrr",
-                "text_6Bgnbe"
+                "text_xGiCrr"
               ]
             }
           },
@@ -519,10 +493,10 @@
             "border_width": 4.5,
             "border_opacity": 100,
             "border_radius": 13,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
+            "toggle_overlay": true,
+            "overlay_color": "#e6e6e6",
             "overlay_style": "solid",
-            "gradient_direction": "to top",
+            "gradient_direction": "to bottom",
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
@@ -761,7 +735,7 @@
                 "text_YV6zNk": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Premium N₂O, trusted by pros, without the<br/>boring branding.</p>",
+                    "text": "<p>Premium N₂O, trusted by pros,<br/>ready to wow your customers.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -803,13 +777,13 @@
       ],
       "name": "t:names.icons_with_text",
       "settings": {
-        "heading": "Whip it, whip it real good!",
+        "heading": "Premium N₂O for bars andcatering professionals",
         "width": "100%",
         "max_width": "none",
         "alignment": "center",
-        "type_preset": "h3",
-        "font": "var(--font-body--family)",
-        "font_size": "1rem",
+        "type_preset": "custom",
+        "font": "var(--font-subheading--family)",
+        "font_size": "2rem",
         "line_height": "normal",
         "letter_spacing": "normal",
         "case": "none",
@@ -852,144 +826,6 @@
     "section_9Nx66B": {
       "type": "section",
       "blocks": {
-        "group_YMqpqa": {
-          "type": "group",
-          "name": "t:names.column",
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 8,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "image_Lb97NW": {
-              "type": "image",
-              "name": "t:names.image",
-              "settings": {
-                "image": "shopify://shop_images/5.jpg",
-                "link": "",
-                "image_ratio": "square",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 24,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_RAxnyr": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<p>Bars & Mixologists</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_HLaKXB": {
-              "type": "text",
-              "name": "t:names.description",
-              "settings": {
-                "text": "<p>You bring the flair. We bring<br/>the gas. </p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button_EmMkq4": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "Order for your bar >",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image_Lb97NW",
-            "text_RAxnyr",
-            "text_HLaKXB",
-            "button_EmMkq4"
-          ]
-        },
         "group_hNK4ac": {
           "type": "group",
           "name": "t:names.column",
@@ -1047,7 +883,7 @@
                 "border_opacity": 100,
                 "border_radius": 0,
                 "padding-block-start": 0,
-                "padding-block-end": 24,
+                "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -1072,7 +908,7 @@
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "padding-block-start": 0,
+                "padding-block-start": 25,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
@@ -1083,7 +919,7 @@
               "type": "text",
               "name": "t:names.description",
               "settings": {
-                "text": "<p>Turn desserts into drama</p>",
+                "text": "<p>Turn desserts into drama.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "center",
@@ -1105,14 +941,14 @@
               },
               "blocks": {}
             },
-            "button_LA7jq7": {
+            "button_dnzbUW": {
               "type": "button",
               "name": "t:names.button",
               "settings": {
-                "label": "Order for your bar >",
-                "link": "shopify://collections/all",
+                "label": "Get a quote.",
+                "link": "shopify://pages/quote-page",
                 "open_in_new_tab": false,
-                "style_class": "link",
+                "style_class": "button",
                 "width": "fit-content",
                 "custom_width": 100,
                 "width_mobile": "fit-content",
@@ -1125,7 +961,145 @@
             "image_NKVpCd",
             "text_NrjtWk",
             "text_eHD3Rz",
-            "button_LA7jq7"
+            "button_dnzbUW"
+          ]
+        },
+        "group_YMqpqa": {
+          "type": "group",
+          "name": "t:names.column",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 8,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "image_Lb97NW": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/5.jpg",
+                "link": "",
+                "image_ratio": "square",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_RAxnyr": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<p>Bars & Mixologists</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h4",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 23,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_HLaKXB": {
+              "type": "text",
+              "name": "t:names.description",
+              "settings": {
+                "text": "<p>You bring the flair. We bring the gas. </p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button_EmMkq4": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Get a quote.",
+                "link": "shopify://pages/quote-page",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_Lb97NW",
+            "text_RAxnyr",
+            "text_HLaKXB",
+            "button_EmMkq4"
           ]
         },
         "group_ptU3NF": {
@@ -1185,7 +1159,7 @@
                 "border_opacity": 100,
                 "border_radius": 0,
                 "padding-block-start": 0,
-                "padding-block-end": 24,
+                "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -1210,7 +1184,7 @@
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "padding-block-start": 0,
+                "padding-block-start": 24,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
@@ -1243,14 +1217,14 @@
               },
               "blocks": {}
             },
-            "button_LWFWRc": {
+            "button_kwqcGh": {
               "type": "button",
               "name": "t:names.button",
               "settings": {
-                "label": "Order for your bar >",
-                "link": "shopify://collections/all",
+                "label": "Get a quote.",
+                "link": "shopify://pages/quote-page",
                 "open_in_new_tab": false,
-                "style_class": "link",
+                "style_class": "button",
                 "width": "fit-content",
                 "custom_width": 100,
                 "width_mobile": "fit-content",
@@ -1263,13 +1237,13 @@
             "image_GRH6yB",
             "text_Wiybqr",
             "text_wXmVcy",
-            "button_LWFWRc"
+            "button_kwqcGh"
           ]
         }
       },
       "block_order": [
-        "group_YMqpqa",
         "group_hNK4ac",
+        "group_YMqpqa",
         "group_ptU3NF"
       ],
       "name": "t:names.multicolumn",
@@ -1278,9 +1252,9 @@
         "width": "100%",
         "max_width": "normal",
         "alignment": "center",
-        "type_preset": "h3",
-        "font": "var(--font-body--family)",
-        "font_size": "1rem",
+        "type_preset": "custom",
+        "font": "var(--font-subheading--family)",
+        "font_size": "2rem",
         "line_height": "normal",
         "letter_spacing": "normal",
         "case": "none",
@@ -1304,7 +1278,7 @@
         "section_width": "page-width",
         "section_height": "medium",
         "section_height_custom": 50,
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
