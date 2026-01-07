@@ -3017,6 +3017,7 @@
         "group_BBpCNV",
         "group_3ewqry"
       ],
+      "disabled": true,
       "name": "t:names.hero_bottom_aligned",
       "settings": {
         "media_type_1": "image",
@@ -3049,6 +3050,92 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
+    },
+    "17677701661e6dbd4f": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5f63034_aCgwpT": {
+          "type": "ai_gen_block_5f63034",
+          "settings": {
+            "padding_top": 60,
+            "padding_bottom": 60,
+            "background_color": "#ffffff",
+            "card_background": "#000000",
+            "divider_color": "#ffffff",
+            "overlay_opacity": 60,
+            "eyebrow_size": 12,
+            "eyebrow_color": "#ffffff",
+            "title_size": 40,
+            "title_color": "#ffffff",
+            "description_size": 16,
+            "description_color": "#e6e6e6",
+            "number_color": "#ffffff",
+            "accent_color": "#ff6600",
+            "link_color": "#ffffff",
+            "link_hover_color": "#ff6600",
+            "badge_background": "#ff6600",
+            "badge_text_color": "#ffffff",
+            "card1_image": "shopify://shop_images/ChatGPT_Image_Nov_26_2025_05_33_44_PM.png",
+            "card1_overlay_start": "#000000",
+            "card1_overlay_end": "#1a1a1a",
+            "card1_badge": "Featured",
+            "card1_eyebrow": "Explore",
+            "card1_title": "Partner with scream!",
+            "card1_description": "<p>We’re shaking up the hospitality world. Partner with SCREAM! and bring premium N₂O, creativity, and chaos to kitchens, bars, and creators all over the UK.</p>",
+            "card1_link": "shopify://pages/quote-page",
+            "card1_link_text": "Apply now",
+            "card2_image": "shopify://shop_images/6.jpg",
+            "card2_overlay_start": "#1a1a1a",
+            "card2_overlay_end": "#000000",
+            "card2_badge": "Safety",
+            "card2_eyebrow": "Safety first",
+            "card2_title": "scream! safely",
+            "card2_description": "<p>We take safety as seriously as fun. Our N₂O is food-grade, verified, and handled<br/>with care, so you can focus on creating without worry.</p>",
+            "card2_link": "shopify://collections",
+            "card2_link_text": "Read our SCREAM! safety guidelines",
+            "card3_image": "shopify://shop_images/7.jpg",
+            "card3_overlay_start": "#000000",
+            "card3_overlay_end": "#1a1a1a",
+            "card3_badge": "New",
+            "card3_eyebrow": "Discover",
+            "card3_title": "The scream! lab",
+            "card3_description": "<p><strong>Chaos you can taste.<br/></strong>Bold recipes for the loud, the hungry, and the fearless in the kitchen and behind the bar.</p>",
+            "card3_link": "shopify://collections",
+            "card3_link_text": "Enter the lab"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5f63034_aCgwpT"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "full-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
@@ -3059,6 +3146,7 @@
     "hero_kHgDTE",
     "product_list_rhRz7t",
     "hero_VwEDEM",
-    "hero_6RNit9"
+    "hero_6RNit9",
+    "17677701661e6dbd4f"
   ]
 }

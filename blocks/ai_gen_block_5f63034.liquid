@@ -1,0 +1,803 @@
+{% doc %}
+  @prompt
+    The scream! lab
+    
+    Enter the lab >
+    
+    Chaos you can taste.Bold recipes for the loud, the hungry, and the fearless in the kitchen and behind the bar.
+    
+    scream! safely
+    
+    Read our SCREAM! safety guidelines >
+    
+    We take safety as seriously as fun. Our N₂O is food-grade, verified, and handledwith care, so you can focus on creating without worry.
+    
+    
+    we have this consntet so make one attractive section with this content cover dispaly diffrent and unquie, UI AI not look good name somethigns else you may use image or else it should classy and elegence, cover all 3 content block and make more unique layout with image or without image
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-feature-section-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    position: relative;
+    background: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_top }}px 20px {{ block.settings.padding_bottom }}px;
+  }
+
+  .ai-feature-container-{{ ai_gen_id }} {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .ai-feature-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    background: {{ block.settings.divider_color }};
+  }
+
+  .ai-feature-card-{{ ai_gen_id }} {
+    position: relative;
+    background: {{ block.settings.card_background }};
+    overflow: hidden;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.4s ease;
+  }
+
+  .ai-feature-card-{{ ai_gen_id }}:hover {
+    transform: translateY(-4px);
+  }
+
+  .ai-feature-image-wrapper-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .ai-feature-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, opacity 0.4s ease;
+  }
+
+  .ai-feature-card-{{ ai_gen_id }}:hover .ai-feature-image-{{ ai_gen_id }} {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+
+  .ai-feature-overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};
+    transition: opacity 0.4s ease;
+  }
+
+  .ai-feature-card-1-{{ ai_gen_id }} .ai-feature-overlay-{{ ai_gen_id }} {
+    background: linear-gradient(135deg, {{ block.settings.card1_overlay_start }} 0%, {{ block.settings.card1_overlay_end }} 100%);
+  }
+
+  .ai-feature-card-2-{{ ai_gen_id }} .ai-feature-overlay-{{ ai_gen_id }} {
+    background: linear-gradient(135deg, {{ block.settings.card2_overlay_start }} 0%, {{ block.settings.card2_overlay_end }} 100%);
+  }
+
+  .ai-feature-card-3-{{ ai_gen_id }} .ai-feature-overlay-{{ ai_gen_id }} {
+    background: linear-gradient(135deg, {{ block.settings.card3_overlay_start }} 0%, {{ block.settings.card3_overlay_end }} 100%);
+  }
+
+  .ai-feature-card-{{ ai_gen_id }}:hover .ai-feature-overlay-{{ ai_gen_id }} {
+    opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 | times: 0.8 }};
+  }
+
+  .ai-feature-content-{{ ai_gen_id }} {
+    position: relative;
+    z-index: 3;
+    padding: 50px 40px;
+    width: 100%;
+  }
+
+  .ai-feature-number-{{ ai_gen_id }} {
+    font-size: 80px;
+    font-weight: 700;
+    color: {{ block.settings.number_color }};
+    opacity: 0.15;
+    line-height: 1;
+    margin: 0 0 -20px;
+    font-family: {{ block.settings.type_heading_font.family }}, {{ block.settings.type_heading_font.fallback_families }};
+  }
+
+  .ai-feature-eyebrow-{{ ai_gen_id }} {
+    font-size: {{ block.settings.eyebrow_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.eyebrow_color }};
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 12px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .ai-feature-eyebrow-{{ ai_gen_id }}::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: {{ block.settings.accent_color }};
+  }
+
+  .ai-feature-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 16px;
+    line-height: 1.2;
+  }
+
+  .ai-feature-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    line-height: 1.7;
+    color: {{ block.settings.description_color }};
+    margin: 0 0 28px;
+  }
+
+  .ai-feature-link-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: {{ block.settings.link_color }};
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: gap 0.3s ease, color 0.3s ease;
+    position: relative;
+  }
+
+  .ai-feature-link-{{ ai_gen_id }}::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: {{ block.settings.link_hover_color }};
+    transition: width 0.3s ease;
+  }
+
+  .ai-feature-link-{{ ai_gen_id }}:hover {
+    gap: 16px;
+    color: {{ block.settings.link_hover_color }};
+  }
+
+  .ai-feature-link-{{ ai_gen_id }}:hover::before {
+    width: calc(100% - 26px);
+  }
+
+  .ai-feature-link-icon-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-feature-link-{{ ai_gen_id }}:hover .ai-feature-link-icon-{{ ai_gen_id }} {
+    transform: translateX(4px);
+  }
+
+  .ai-feature-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-feature-placeholder-{{ ai_gen_id }} svg {
+    width: 100px;
+    height: 100px;
+    opacity: 0.2;
+  }
+
+  .ai-feature-badge-{{ ai_gen_id }} {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: {{ block.settings.badge_background }};
+    color: {{ block.settings.badge_text_color }};
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 4;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .ai-feature-card-{{ ai_gen_id }}:hover .ai-feature-badge-{{ ai_gen_id }} {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-feature-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ai-feature-card-1-{{ ai_gen_id }} {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      min-height: 600px;
+    }
+
+    .ai-feature-card-2-{{ ai_gen_id }} {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      min-height: 300px;
+    }
+
+    .ai-feature-card-3-{{ ai_gen_id }} {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      min-height: 300px;
+    }
+
+    .ai-feature-card-1-{{ ai_gen_id }} .ai-feature-content-{{ ai_gen_id }} {
+      max-width: 500px;
+      padding: 80px 60px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .ai-feature-card-1-{{ ai_gen_id }} {
+      min-height: 700px;
+    }
+
+    .ai-feature-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size }}px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-feature-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.75 }}px;
+    }
+
+    .ai-feature-number-{{ ai_gen_id }} {
+      font-size: 60px;
+    }
+
+    .ai-feature-content-{{ ai_gen_id }} {
+      padding: 40px 30px;
+    }
+
+    .ai-feature-badge-{{ ai_gen_id }} {
+      top: 20px;
+      right: 20px;
+    }
+  }
+{% endstyle %}
+
+<feature-section-{{ ai_gen_id }} class="ai-feature-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-feature-container-{{ ai_gen_id }}">
+    <div class="ai-feature-grid-{{ ai_gen_id }}">
+      <div class="ai-feature-card-{{ ai_gen_id }} ai-feature-card-1-{{ ai_gen_id }}">
+        <div class="ai-feature-image-wrapper-{{ ai_gen_id }}">
+          {% if block.settings.card1_image %}
+            <img
+              src="{{ block.settings.card1_image | image_url: width: 1200 }}"
+              alt="{{ block.settings.card1_image.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.card1_image.width }}"
+              height="{{ block.settings.card1_image.height }}"
+              class="ai-feature-image-{{ ai_gen_id }}"
+            >
+          {% else %}
+            <div class="ai-feature-placeholder-{{ ai_gen_id }}">
+              {{ 'lifestyle-1' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+        <div class="ai-feature-overlay-{{ ai_gen_id }}"></div>
+        {% if block.settings.card1_badge != blank %}
+          <div class="ai-feature-badge-{{ ai_gen_id }}">{{ block.settings.card1_badge }}</div>
+        {% endif %}
+        <div class="ai-feature-content-{{ ai_gen_id }}">
+          <div class="ai-feature-number-{{ ai_gen_id }}">01</div>
+          {% if block.settings.card1_eyebrow != blank %}
+            <div class="ai-feature-eyebrow-{{ ai_gen_id }}">{{ block.settings.card1_eyebrow }}</div>
+          {% endif %}
+          {% if block.settings.card1_title != blank %}
+            <h2 class="ai-feature-title-{{ ai_gen_id }}">{{ block.settings.card1_title }}</h2>
+          {% endif %}
+          {% if block.settings.card1_description != blank %}
+            <div class="ai-feature-description-{{ ai_gen_id }}">{{ block.settings.card1_description }}</div>
+          {% endif %}
+          {% if block.settings.card1_link != blank %}
+            <a href="{{ block.settings.card1_link }}" class="ai-feature-link-{{ ai_gen_id }}">
+              {{ block.settings.card1_link_text }}
+              <svg class="ai-feature-link-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="ai-feature-card-{{ ai_gen_id }} ai-feature-card-2-{{ ai_gen_id }}">
+        <div class="ai-feature-image-wrapper-{{ ai_gen_id }}">
+          {% if block.settings.card2_image %}
+            <img
+              src="{{ block.settings.card2_image | image_url: width: 800 }}"
+              alt="{{ block.settings.card2_image.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.card2_image.width }}"
+              height="{{ block.settings.card2_image.height }}"
+              class="ai-feature-image-{{ ai_gen_id }}"
+            >
+          {% else %}
+            <div class="ai-feature-placeholder-{{ ai_gen_id }}">
+              {{ 'lifestyle-2' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+        <div class="ai-feature-overlay-{{ ai_gen_id }}"></div>
+        {% if block.settings.card2_badge != blank %}
+          <div class="ai-feature-badge-{{ ai_gen_id }}">{{ block.settings.card2_badge }}</div>
+        {% endif %}
+        <div class="ai-feature-content-{{ ai_gen_id }}">
+          <div class="ai-feature-number-{{ ai_gen_id }}">02</div>
+          {% if block.settings.card2_eyebrow != blank %}
+            <div class="ai-feature-eyebrow-{{ ai_gen_id }}">{{ block.settings.card2_eyebrow }}</div>
+          {% endif %}
+          {% if block.settings.card2_title != blank %}
+            <h2 class="ai-feature-title-{{ ai_gen_id }}">{{ block.settings.card2_title }}</h2>
+          {% endif %}
+          {% if block.settings.card2_description != blank %}
+            <div class="ai-feature-description-{{ ai_gen_id }}">{{ block.settings.card2_description }}</div>
+          {% endif %}
+          {% if block.settings.card2_link != blank %}
+            <a href="{{ block.settings.card2_link }}" class="ai-feature-link-{{ ai_gen_id }}">
+              {{ block.settings.card2_link_text }}
+              <svg class="ai-feature-link-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="ai-feature-card-{{ ai_gen_id }} ai-feature-card-3-{{ ai_gen_id }}">
+        <div class="ai-feature-image-wrapper-{{ ai_gen_id }}">
+          {% if block.settings.card3_image %}
+            <img
+              src="{{ block.settings.card3_image | image_url: width: 800 }}"
+              alt="{{ block.settings.card3_image.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.card3_image.width }}"
+              height="{{ block.settings.card3_image.height }}"
+              class="ai-feature-image-{{ ai_gen_id }}"
+            >
+          {% else %}
+            <div class="ai-feature-placeholder-{{ ai_gen_id }}">
+              {{ 'collection-1' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+        <div class="ai-feature-overlay-{{ ai_gen_id }}"></div>
+        {% if block.settings.card3_badge != blank %}
+          <div class="ai-feature-badge-{{ ai_gen_id }}">{{ block.settings.card3_badge }}</div>
+        {% endif %}
+        <div class="ai-feature-content-{{ ai_gen_id }}">
+          <div class="ai-feature-number-{{ ai_gen_id }}">03</div>
+          {% if block.settings.card3_eyebrow != blank %}
+            <div class="ai-feature-eyebrow-{{ ai_gen_id }}">{{ block.settings.card3_eyebrow }}</div>
+          {% endif %}
+          {% if block.settings.card3_title != blank %}
+            <h2 class="ai-feature-title-{{ ai_gen_id }}">{{ block.settings.card3_title }}</h2>
+          {% endif %}
+          {% if block.settings.card3_description != blank %}
+            <div class="ai-feature-description-{{ ai_gen_id }}">{{ block.settings.card3_description }}</div>
+          {% endif %}
+          {% if block.settings.card3_link != blank %}
+            <a href="{{ block.settings.card3_link }}" class="ai-feature-link-{{ ai_gen_id }}">
+              {{ block.settings.card3_link_text }}
+              <svg class="ai-feature-link-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</feature-section-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class FeatureSection{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.cards = this.querySelectorAll('.ai-feature-card-{{ ai_gen_id }}');
+        this.setupInteractions();
+      }
+
+      setupInteractions() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          return;
+        }
+
+        this.cards.forEach((card) => {
+          const image = card.querySelector('.ai-feature-image-{{ ai_gen_id }}');
+          if (!image) return;
+
+          card.addEventListener('mouseenter', () => {
+            image.style.transform = 'scale(1.08)';
+          });
+
+          card.addEventListener('mouseleave', () => {
+            image.style.transform = 'scale(1)';
+          });
+        });
+      }
+    }
+
+    customElements.define('feature-section-{{ ai_gen_id }}', FeatureSection{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Feature showcase",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 60
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Opacity",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Eyebrow size",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 24,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Description size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#e6e6e6"
+    },
+    {
+      "type": "color",
+      "id": "number_color",
+      "label": "Number color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#ff6600"
+    },
+    {
+      "type": "header",
+      "content": "Links"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link hover color",
+      "default": "#ff6600"
+    },
+    {
+      "type": "header",
+      "content": "Badge"
+    },
+    {
+      "type": "color",
+      "id": "badge_background",
+      "label": "Background",
+      "default": "#ff6600"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Card 1 - The scream! lab"
+    },
+    {
+      "type": "image_picker",
+      "id": "card1_image",
+      "label": "Image"
+    },
+    {
+      "type": "color",
+      "id": "card1_overlay_start",
+      "label": "Overlay gradient start",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "card1_overlay_end",
+      "label": "Overlay gradient end",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "text",
+      "id": "card1_badge",
+      "label": "Badge text",
+      "default": "Featured"
+    },
+    {
+      "type": "text",
+      "id": "card1_eyebrow",
+      "label": "Eyebrow text",
+      "default": "Explore"
+    },
+    {
+      "type": "text",
+      "id": "card1_title",
+      "label": "Title",
+      "default": "The scream! lab"
+    },
+    {
+      "type": "richtext",
+      "id": "card1_description",
+      "label": "Description",
+      "default": "<p>Chaos you can taste. Bold recipes for the loud, the hungry, and the fearless in the kitchen and behind the bar.</p>"
+    },
+    {
+      "type": "url",
+      "id": "card1_link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "card1_link_text",
+      "label": "Link text",
+      "default": "Enter the lab"
+    },
+    {
+      "type": "header",
+      "content": "Card 2 - scream! safely"
+    },
+    {
+      "type": "image_picker",
+      "id": "card2_image",
+      "label": "Image"
+    },
+    {
+      "type": "color",
+      "id": "card2_overlay_start",
+      "label": "Overlay gradient start",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "card2_overlay_end",
+      "label": "Overlay gradient end",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "card2_badge",
+      "label": "Badge text",
+      "default": "Safety"
+    },
+    {
+      "type": "text",
+      "id": "card2_eyebrow",
+      "label": "Eyebrow text",
+      "default": "Safety first"
+    },
+    {
+      "type": "text",
+      "id": "card2_title",
+      "label": "Title",
+      "default": "scream! safely"
+    },
+    {
+      "type": "richtext",
+      "id": "card2_description",
+      "label": "Description",
+      "default": "<p>We take safety as seriously as fun. Our N₂O is food-grade, verified, and handled with care.</p>"
+    },
+    {
+      "type": "url",
+      "id": "card2_link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "card2_link_text",
+      "label": "Link text",
+      "default": "Read guidelines"
+    },
+    {
+      "type": "header",
+      "content": "Card 3 - Additional content"
+    },
+    {
+      "type": "image_picker",
+      "id": "card3_image",
+      "label": "Image"
+    },
+    {
+      "type": "color",
+      "id": "card3_overlay_start",
+      "label": "Overlay gradient start",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "card3_overlay_end",
+      "label": "Overlay gradient end",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "text",
+      "id": "card3_badge",
+      "label": "Badge text",
+      "default": "New"
+    },
+    {
+      "type": "text",
+      "id": "card3_eyebrow",
+      "label": "Eyebrow text",
+      "default": "Discover"
+    },
+    {
+      "type": "text",
+      "id": "card3_title",
+      "label": "Title",
+      "default": "Quality guaranteed"
+    },
+    {
+      "type": "richtext",
+      "id": "card3_description",
+      "label": "Description",
+      "default": "<p>Premium ingredients and verified products for your culinary adventures.</p>"
+    },
+    {
+      "type": "url",
+      "id": "card3_link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "card3_link_text",
+      "label": "Link text",
+      "default": "Learn more"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature showcase"
+    }
+  ]
+}
+{% endschema %}
