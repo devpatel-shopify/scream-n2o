@@ -1,0 +1,9 @@
+.quote-icon-text .image-block .image-block__image {
+    object-fit: contain;
+}
+
+@media screen and (max-width: 749px) {
+    .quote-icon-text .image-block {
+        display: none;
+    }
+}

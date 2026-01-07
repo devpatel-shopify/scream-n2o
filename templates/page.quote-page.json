@@ -93,11 +93,11 @@
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "center",
                 "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
                 "width": "custom",
-                "custom_width": 50,
+                "custom_width": 100,
                 "width_mobile": "custom",
                 "custom_width_mobile": 100,
                 "height": "fit",
@@ -128,7 +128,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h1>Partner with us.<br/>Serve SCREAM! Earn More</h1>",
+                    "text": "<h1>Partner with us.<br/>Serve SCREAM! Earn More.</h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -153,7 +153,7 @@
                 "text_CNg4M6": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>At <strong>SCREAM!</strong>, we believe the strongest businesses are built through strong partnerships.<br/> If you supply the catering, events or hospitality industry, our <strong>premium 99.99% purity food-grade<br/>N₂O</strong> can help you expand your offering, strengthen your margins, and deliver a superior service to<br/>your customers.<br/>As a Scream distributor, you’ll receive <strong>exclusive wholesale pricing,</strong> priority support, and a logistics<br/>system designed to make selling easy, fast, and stress-free.<br/><br/></p>",
+                    "text": "<p>At <strong>SCREAM!</strong>, we believe long-term success is built<br/>on strong partnerships with professional catering, bar, and hospitality businesses.<br/>As an official <strong>SCREAM!</strong> partner or distributor, you’ll<br/>benefit from exclusive wholesale pricing, dedicated<br/>account management, and a reliable, next-day<br/>logistics network designed to make selling<br/>food-grade <strong>N₂O</strong> simple, fast, and stress-free.<br/>Our <strong>premium 99.99% purity food-grade nitrous oxide<br/>(N₂O)</strong> is trusted by bars, caterers, and hospitality<br/>professionals to deliver consistent results, improved<br/>margins, and a superior end product - every service,<br/>every time.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -178,7 +178,7 @@
                 "button_bCgz9F": {
                   "type": "button",
                   "settings": {
-                    "label": "Get started",
+                    "label": "Get started.",
                     "link": "#",
                     "open_in_new_tab": false,
                     "style_class": "button",
@@ -725,9 +725,9 @@
         "width": "100%",
         "max_width": "narrow",
         "alignment": "center",
-        "type_preset": "h2",
-        "font": "var(--font-body--family)",
-        "font_size": "1rem",
+        "type_preset": "custom",
+        "font": "var(--font-heading--family)",
+        "font_size": "2.5rem",
         "line_height": "normal",
         "letter_spacing": "normal",
         "case": "none",
@@ -751,7 +751,7 @@
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -764,7 +764,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 60,
-        "padding-block-end": 60
+        "padding-block-end": 60,
+        "custom_class": ""
       }
     },
     "section_Ym7tWT": {
@@ -862,7 +863,7 @@
                 "text_9HX4JA": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Complete the Distributor Form</p>",
+                    "text": "<p>Complete distributor form.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -920,6 +921,29 @@
             "icon_qXeWBY",
             "group_aUy4MH"
           ]
+        },
+        "image_KJwcYh": {
+          "type": "image",
+          "name": "t:names.image",
+          "settings": {
+            "image": "shopify://shop_images/arrow-img.png",
+            "link": "",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 15,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "group_HjnVYd": {
           "type": "group",
@@ -1013,7 +1037,7 @@
                 "text_EL49GX": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Compliance & Onboarding</p>",
+                    "text": "<p>Compliance & onboarding.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1038,7 +1062,7 @@
                 "text_FzRUdg": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We’ll carry out the necessary compliance checks and create a mutual agreement that protects both businesses and keeps everything fully legal and<br/>safe.</p>",
+                    "text": "<p>We’ll carry out the necessary compliance checks and create a mutual agreement that protects both businesses and keeps everything fully legal and safe.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1071,6 +1095,29 @@
             "icon_Grn6Di",
             "group_qdDiVX"
           ]
+        },
+        "image_wyKhAD": {
+          "type": "image",
+          "name": "t:names.image",
+          "settings": {
+            "image": "shopify://shop_images/arrow-img.png",
+            "link": "",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 15,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "group_TMitRK": {
           "type": "group",
@@ -1164,7 +1211,7 @@
                 "text_DbaCzG": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Meet Your Account Manager</p>",
+                    "text": "<p>Meet account manager. </p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1189,7 +1236,7 @@
                 "text_F9HpLC": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>You’ll be introduced to your dedicated account manager, who will handle deliveries, logistics, stock planning, and support - so you can focus on<br/>selling, not admin.</p>",
+                    "text": "<p>You’ll be introduced to your dedicated account manager, who will handle deliveries, logistics, stock planning, and support - so you can focus on selling, not admin.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1226,18 +1273,20 @@
       },
       "block_order": [
         "group_bdBfra",
+        "image_KJwcYh",
         "group_HjnVYd",
+        "image_wyKhAD",
         "group_TMitRK"
       ],
       "name": "t:names.icons_with_text",
       "settings": {
-        "heading": "How It Works",
+        "heading": "How It Works.",
         "width": "100%",
         "max_width": "normal",
         "alignment": "center",
-        "type_preset": "h2",
-        "font": "var(--font-body--family)",
-        "font_size": "1rem",
+        "type_preset": "custom",
+        "font": "var(--font-heading--family)",
+        "font_size": "2.5rem",
         "line_height": "normal",
         "letter_spacing": "normal",
         "case": "none",
@@ -1274,7 +1323,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 0,
-        "padding-block-end": 100
+        "padding-block-end": 100,
+        "custom_class": "quote-icon-text"
       }
     },
     "hero_mByjhT": {
@@ -1529,7 +1579,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 60,
-        "padding-block-end": 60
+        "padding-block-end": 60,
+        "custom_class": ""
       }
     },
     "1765429718588581a1": {
