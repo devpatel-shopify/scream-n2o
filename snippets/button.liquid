@@ -22,6 +22,7 @@
     {{ block_settings.style_class }}
     {{ block_settings.style_class }}--{{ block.id }}
     scroll-forrmsection
+    custom_button
   "
   style="{% render 'size-style', settings: block_settings %}"
   {%- if block_settings.open_in_new_tab -%}
@@ -43,4 +44,9 @@
       text-decoration-color: transparent;
     }
   }
+  .custom_button {
+    --button-color: #ffffff;
+    --button-background-color : #000000;
+  }
+
 {% endstylesheet %}
