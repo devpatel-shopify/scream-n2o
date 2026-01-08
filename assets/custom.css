@@ -1,6 +1,19 @@
 .quote-icon-text .image-block .image-block__image {
     object-fit: contain;
 }
+.partner-card-sec .group-block {
+    border: 2px solid #e6e6e6;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 14px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.partner-card-sec .group-block:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: #ffffff;
+}
 @media screen and (max-width: 749px) {
     .quote-icon-text .image-block {
         display: none;
