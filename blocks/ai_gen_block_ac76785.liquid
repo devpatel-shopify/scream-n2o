@@ -163,6 +163,7 @@
     align-items: center;
     justify-content: center;
     padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    padding-right: calc({{ block.settings.button_padding_horizontal }}px + 20px);
     background-color: {{ block.settings.button_background }};
     color: {{ block.settings.button_text_color }};
     text-decoration: none;
@@ -175,6 +176,7 @@
     letter-spacing: 0.5px;
     align-self: flex-start;
     gap: 8px;
+    position: relative;
   }
 
   .ai-who-we-serve-card-button-{{ ai_gen_id }}:hover {
@@ -188,12 +190,17 @@
     content: '→';
     font-size: 18px;
     transition: transform 0.3s ease;
-    position: relative;
-    top: -2px;
+    position: absolute;
+    top: 0;
+    line-height: 1;
+    left: auto;
+    right: 6%;
+    top: 49%;
+    transform: translate(-50%, -50%);
   }
-
-  .ai-who-we-serve-card-button-{{ ai_gen_id }}:hover::after {
-    transform: translateX(4px);
+  
+  .isChrome .ai-who-we-serve-card-button-ayw53shfsy3njdhr6saigenblockac76785nrar79::after {
+    top: 44%;
   }
 
   .ai-who-we-serve-image-placeholder-{{ ai_gen_id }} {

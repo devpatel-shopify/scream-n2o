@@ -28,6 +28,7 @@
     {%- render 'color-schemes' -%}
 
     {{ 'custom.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'custom.js' | asset_url }}"></script>
 
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}
