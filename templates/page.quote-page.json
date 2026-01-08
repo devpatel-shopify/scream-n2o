@@ -1337,9 +1337,9 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "2.5rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -1358,7 +1358,7 @@
         "text_HYxYF8": {
           "type": "text",
           "settings": {
-            "text": "<p>If you’re looking for a long-term partner who values reliability, safety, and mutual success, Scream is here to support your<br/>growth every step of the way.</p>",
+            "text": "<p>If you’re looking for a long-term partner who values reliability, safety, and mutual success, SCREAM! is here to support your<br/>growth every step of the way.</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
@@ -1402,7 +1402,7 @@
             "label": "Become a distributor today.",
             "link": "#",
             "open_in_new_tab": false,
-            "style_class": "button-secondary",
+            "style_class": "button-custom",
             "width": "custom",
             "custom_width": 25,
             "width_mobile": "custom",
@@ -1453,6 +1453,32 @@
     "section_7BAnwH": {
       "type": "section",
       "blocks": {
+        "text_7ypXdA": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>Serve SCREAM!</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "2rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "forms_inline_t4PTRT": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
@@ -1464,7 +1490,7 @@
             "errors_color": "#e02229",
             "text_alignment": "center",
             "form_alignment": "center",
-            "padding_top": 0,
+            "padding_top": 5,
             "padding_bottom": 24,
             "padding_right": 0,
             "padding_left": 0
@@ -1478,8 +1504,8 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
             "font_size": "1rem",
             "line_height": "normal",
             "letter_spacing": "normal",
@@ -1530,6 +1556,7 @@
         }
       },
       "block_order": [
+        "text_7ypXdA",
         "forms_inline_t4PTRT",
         "text_KjbtUx",
         "contact_form_UkqxWd"
@@ -1566,7 +1593,7 @@
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",

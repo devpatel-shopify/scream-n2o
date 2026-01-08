@@ -69,7 +69,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Premium N₂O for bars and </p><p>catering professionals.<br/><br/></p>",
+                "text": "<p>Premium N₂O for bars and <br/>catering professionals.<br/><br/></p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
