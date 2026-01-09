@@ -1510,7 +1510,7 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Get Quote",
+            "label": "Get a quote",
             "link": "shopify://pages/quote-page",
             "open_in_new_tab": false,
             "style_class": "button",
