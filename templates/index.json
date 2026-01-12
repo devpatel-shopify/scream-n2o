@@ -831,7 +831,7 @@
         "ai_gen_block_881b1f9_AjAyDq": {
           "type": "ai_gen_block_881b1f9",
           "settings": {
-            "heading": "Premium N₂O for bars andcatering professionals.",
+            "heading": "Premium N₂O for bars and catering professionals.",
             "subheading": "",
             "heading_size": 32,
             "subheading_size": 16,
@@ -1513,7 +1513,7 @@
             "label": "Get a quote.",
             "link": "shopify://pages/quote-page",
             "open_in_new_tab": false,
-            "style_class": "button",
+            "style_class": "button-custom",
             "width": "fit-content",
             "custom_width": 100,
             "width_mobile": "fit-content",
